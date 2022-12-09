@@ -1,0 +1,68 @@
+package Packet;
+
+import java.util.Scanner;
+
+public class Main {
+	
+		// Calculating Arithmetic Mean , Standard Deviation and Variance ...
+	
+	public static void main(String[] args) {
+		
+		// Physics , Math , Music , Turkish  , History , Chemistry = n = 6
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Type Your Physics Mark:");
+		
+		int Phy = scan.nextInt();
+		
+		System.out.println("Type Your Math Mark:");
+		
+		int Mat = scan.nextInt();
+		
+		System.out.println("Type Your Music Mark:");
+		
+		int Mus = scan.nextInt();
+		
+		System.out.println("Type Your Turkish Mark: ");
+		
+		int Tur = scan.nextInt();
+		
+		System.out.println("Type Your History Mark:");
+		
+		int His = scan.nextInt();
+		
+		System.out.println("Type Your Chemistry Mark:");
+		
+		int Che = scan.nextInt();
+		
+		
+		int AO = (Phy+Mat+Mus+Tur+His+Che)/6;
+		
+		System.out.println("Arithmetic Mean : " + AO);
+		
+		
+		int[] arr1 = {Phy-AO,Mat-AO,Mus-AO,Tur-AO,His-AO,Che-AO}; 
+		
+		double a = Math.pow(arr1[0],2);
+		double b = Math.pow(arr1[1],2);
+		double c = Math.pow(arr1[2],2);
+		double d = Math.pow(arr1[3],2);
+		double e = Math.pow(arr1[4],2);
+		double f = Math.pow(arr1[5],2);
+		
+		
+		double var = (a+b+c+d+e+f)/5; // var : means variance ...
+		
+		double SS = Math.sqrt(var); // SS : means Standard Deviation...
+		
+		System.out.println("Standard Deviation : " + SS);
+		System.out.println("Variance : " + var);
+		
+		
+		
+	}
+	
+	
+
+}
